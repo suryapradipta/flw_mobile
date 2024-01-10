@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "877423710141",
+    "project_id": "flw-app",
+    "storage_bucket": "flw-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877423710141:android:1de0f422553fb292590cd4",
+        "android_client_info": {
+          "package_name": "com.example.flw_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4Lo-qgRvb-ed58z3qpNNZscawnYf1yaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
