@@ -1,17 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flw_mobile/firebase_options.dart';
+import 'package:flw_mobile/app/routes/routes.dart';
+import 'package:flw_mobile/global.dart';
 import 'package:flw_mobile/main_bindings.dart';
 import 'package:get/get.dart';
-import 'dependencies.dart' as dependencies;
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  await dependencies.init();
-
+  await Global.init();
   runApp(const MyApp());
 }
 
@@ -22,13 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'FLW',
+      title: 'Food Waste Reduction App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: null,
       initialBinding: MainBindings(),
+      initialRoute: AppRoutes.LOGIN,
+      getPages: AppPages.routes,
     );
   }
 }
